@@ -1,0 +1,22 @@
+@font-face { font-family: boldItalic; src: url(Esphimere-Bold-Italic.otf); }
+
+#title,h1
+{
+    font-family: "boldItalic" !important;
+}
+
+
+.v-main{
+    
+}
+
+header{
+    background-color: rgb(138 191 234);
+}
+
+canvas{
+
+    width:100% !important;
+    max-height:800px !important;
+  
+  }

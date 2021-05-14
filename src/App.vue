@@ -1,29 +1,57 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-  </div>
+  <v-app>
+    <v-app-bar
+      app
+      absolute
+      color="rgb(138 191 234)"
+      shrink-on-scoroll
+      prominent
+      dark
+      src="https://cdn.pixabay.com/photo/2012/03/04/00/43/architecture-22039_1280.jpg"
+    >
+      <div class="d-flex align-center">
+        <v-img
+          alt="Vuetify Name"
+          class="shrink mt-1 hidden-sm-and-down"
+          contain
+          min-width="100"
+          src="https://ahcv.com/wp-content/themes/AHCV/assets/images/ahcv-white-shadow.png"
+          width="100"
+        />
+      </div>
+
+      <v-app-bar-title> <h1 style="width: 500px">Customer Portal</h1></v-app-bar-title>
+
+      <v-spacer></v-spacer>
+
+      <v-btn
+        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        target="_blank"
+        text
+      >
+        <v-icon>mdi-menu</v-icon>
+      </v-btn>
+    </v-app-bar>
+
+    <v-main>
+      <HelloWorld />
+    </v-main>
+  </v-app>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
+import Vue from "vue";
+import HelloWorld from "./components/HelloWorld.vue";
 
-@Component({
+export default Vue.extend({
+  name: "App",
+
   components: {
     HelloWorld,
   },
-})
-export default class App extends Vue {}
-</script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  data: () => ({
+    //
+  }),
+});
+</script>
